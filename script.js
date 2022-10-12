@@ -4,19 +4,15 @@ var seconds = 0;
 let homeScore = 0;
 let guestScore = 0;
 var lineBreaker = document.querySelectorAll("br");
-//var homeField = document.getElementById("myText");
-//var guestField = document.getElementById("myText2");
-//var timeField = document.getElementById("myText3");
-//var startBt = document.getElementById("bt");
 
 
 function myFunction() {
 
-  var x = document.getElementById("myText").value;
-  var y = document.getElementById("myText2").value;
+  var homeName = document.getElementById("myText").value;
+  var guestName = document.getElementById("myText2").value;
   minutes = document.getElementById("myText3").value;
 
-  if(x == '' || y == '' || minutes == ''){
+  if(homeName == '' || guestName == '' || minutes == ''){
     document.getElementById("demo").innerHTML =  "Input field/s are empty, fill every fields";
   }
   else if(isNaN(minutes)){
@@ -25,11 +21,11 @@ function myFunction() {
   else{
     var mylist = document.getElementById("myList");
     var mylist2 = document.getElementById("myList2");
-    var bodyColor = document.getElementById("bodyId");
+    var bodyId = document.getElementById("bodyId");
     setBackgroundColor();
 
     function setBackgroundColor(){
-      bodyColor.style.background = "linear-gradient(to right," + mylist.options[mylist.selectedIndex].text +
+      bodyId.style.background = "linear-gradient(to right," + mylist.options[mylist.selectedIndex].text +
       "," + mylist2.options[mylist2.selectedIndex].text + ")";
     }
     
@@ -38,9 +34,9 @@ function myFunction() {
     document.getElementById("demo").innerHTML =  hours + ":"
     + minutes + ":" + seconds;
     document.getElementById("demo2").innerHTML = 
-    "Points of team " + x + ": " + homeScore;
+    "Points of team " + homeName + ": " + homeScore;
     document.getElementById("demo3").innerHTML = 
-    "Points of team " + y + ": " + guestScore;
+    "Points of team " + guestName + ": " + guestScore;
     
     //Remove every selection elements
     const element = document.getElementById("one");
@@ -77,7 +73,7 @@ function myFunction() {
 
     var remaining = 0;
     
-    document.getElementById("bodyId").addEventListener("keyup", function (event){
+    bodyId.addEventListener("keyup", function (event){
     
     if(event.key == "p"){
       console.log("play");
@@ -128,20 +124,20 @@ function myFunction() {
   }, 1000);
 
     //Add or reduce scores
-    document.getElementById("bodyId").addEventListener("keyup", function (event){
+    bodyId.addEventListener("keyup", function (event){
     
     if(event.key == "1"){
-    document.getElementById('demo2').innerHTML = "Points of team " + x + ": " + (homeScore = homeScore + 1);
+    document.getElementById('demo2').innerHTML = "Points of team " + homeName + ": " + (homeScore = homeScore + 1);
     console.log(homeScore);
     }
     else if(event.key == "!"){
-    document.getElementById('demo2').innerHTML = "Points of team " + x + ": " + --homeScore;
+    document.getElementById('demo2').innerHTML = "Points of team " + homeName + ": " + --homeScore;
     }
     else if(event.key == "2"){
-    document.getElementById('demo3').innerHTML = "Points of team " + y + ": " + ++guestScore;
+    document.getElementById('demo3').innerHTML = "Points of team " + guestName + ": " + ++guestScore;
     }
     else if(event.key == '"'){
-    document.getElementById('demo3').innerHTML = "Points of team " + y + ": " + --guestScore;
+    document.getElementById('demo3').innerHTML = "Points of team " + guestName + ": " + --guestScore;
     }
     
   });

@@ -1,9 +1,17 @@
 body {
-    background: linear-gradient(to right, white, white);
+    background: linear-gradient(to right bottom, white, white);
 }
 
 p {
   text-align: center;
   font-size: 60px;
   margin-top: 0px;
+}
+
+#demo2 {
+  text-align: left;
+}
+
+#demo3 {
+  text-align: right;
 }
