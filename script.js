@@ -25,12 +25,13 @@ function myFunction() {
     setBackgroundColor();
 
     function setBackgroundColor(){
-      bodyId.style.background = "linear-gradient(to right," + mylist.options[mylist.selectedIndex].text +
+      //bodyId.style.minHeight = "100%";
+      bodyId.style.background = "linear-gradient(to right bottom," + mylist.options[mylist.selectedIndex].text +
       "," + mylist2.options[mylist2.selectedIndex].text + ")";
+      bodyId.style.backgroundAttachment = "fixed";
     }
     
     //Set playtime, team names and scores
-    //minutes = document.getElementById("myText3").value;
     document.getElementById("demo").innerHTML =  hours + ":"
     + minutes + ":" + seconds;
     document.getElementById("demo2").innerHTML = 
@@ -66,7 +67,6 @@ function myFunction() {
     for (let i = 0; i < lineBreaker.length; i++) {
       lineBreaker[i].remove();
     }
-    //lineBreaker.parentNode.removeChild(lineBreaker);
     
   // Update the count down every 1 second
   var update = setInterval(function() {
