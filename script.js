@@ -25,7 +25,6 @@ function myFunction() {
     setBackgroundColor();
 
     function setBackgroundColor(){
-      //bodyId.style.minHeight = "100%";
       bodyId.style.background = "linear-gradient(to right bottom," + mylist.options[mylist.selectedIndex].text +
       "," + mylist2.options[mylist2.selectedIndex].text + ")";
       bodyId.style.backgroundAttachment = "fixed";
@@ -100,6 +99,20 @@ function myFunction() {
     // Output the match time
     document.getElementById("demo").innerHTML = hours + ":"
     + minutes + ":" + seconds;
+
+    //Add number zero front of the values seconds and minutes when values are less than ten
+    if(seconds <= 9){
+      document.getElementById("demo").innerHTML = hours + ":"
+      + minutes + ":0" + seconds;
+    }
+    if(minutes <= 9){
+      document.getElementById("demo").innerHTML = hours + ":0"
+      + minutes + ":" + seconds;
+    }
+    if(minutes <= 9 && seconds <= 9){
+      document.getElementById("demo").innerHTML = hours + ":0"
+      + minutes + ":0" + seconds;
+    }
       
     // When the count down is over, write match results 
     if (remaining < 0) {
@@ -127,17 +140,17 @@ function myFunction() {
     bodyId.addEventListener("keyup", function (event){
     
     if(event.key == "1"){
-    document.getElementById('demo2').innerHTML = "Points of team " + homeName + ": " + (homeScore = homeScore + 1);
-    console.log(homeScore);
+      document.getElementById('demo2').innerHTML = "Points of team " + homeName + ": " + (homeScore = homeScore + 1);
+      console.log(homeScore);
     }
     else if(event.key == "!"){
-    document.getElementById('demo2').innerHTML = "Points of team " + homeName + ": " + --homeScore;
+      document.getElementById('demo2').innerHTML = "Points of team " + homeName + ": " + --homeScore;
     }
     else if(event.key == "2"){
-    document.getElementById('demo3').innerHTML = "Points of team " + guestName + ": " + ++guestScore;
+      document.getElementById('demo3').innerHTML = "Points of team " + guestName + ": " + ++guestScore;
     }
     else if(event.key == '"'){
-    document.getElementById('demo3').innerHTML = "Points of team " + guestName + ": " + --guestScore;
+      document.getElementById('demo3').innerHTML = "Points of team " + guestName + ": " + --guestScore;
     }
     
   });
