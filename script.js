@@ -4,6 +4,30 @@ var seconds = 0;
 let homeScore = 0;
 let guestScore = 0;
 var lineBreaker = document.querySelectorAll("br");
+const home_image_input = document.querySelector("#homeImageInput");
+const guest_image_input = document.querySelector("#guestImageInput");
+var loaded_image1 = "";
+var loaded_image2 = "";
+
+    //Load and input teams logos
+    //Home team's logo
+    home_image_input.addEventListener("change", function(){
+      const read = new FileReader();
+      read.addEventListener("load", () => {
+        loaded_image1 = read.result;
+        document.querySelector("#homeLogo").style.backgroundImage = `url(${loaded_image1})`;
+      });
+      read.readAsDataURL(this.files[0]);
+    })
+    //Guest team's logo
+    guest_image_input.addEventListener("change", function(){
+      const read = new FileReader();
+      read.addEventListener("load", () => {
+        loaded_image2 = read.result;
+        document.querySelector("#guestLogo").style.backgroundImage = `url(${loaded_image2})`;
+      });
+      read.readAsDataURL(this.files[0]);
+    })
 
 
 function myFunction() {
@@ -63,9 +87,17 @@ function myFunction() {
     element11.remove();
     const element12 = document.getElementById("myList2");
     element12.remove();
-    for (let i = 0; i < lineBreaker.length; i++) {
+    for (let i = 0; i < lineBreaker.length-1; i++) {
       lineBreaker[i].remove();
     }
+    const element13 = document.getElementById("homeImage");
+    element13.remove();
+    const element14 = document.getElementById("homeImageInput");
+    element14.remove();
+    const element15 = document.getElementById("guestImage");
+    element15.remove();
+    const element16 = document.getElementById("guestImageInput");
+    element16.remove();
     
   // Update the count down every 1 second
   var update = setInterval(function() {
@@ -117,10 +149,16 @@ function myFunction() {
     // When the count down is over, write match results 
     if (remaining < 0) {
       clearInterval(update);
-      const element11 = document.getElementById("demo2");
-      element11.remove();
-      const element12 = document.getElementById("demo3");
-      element12.remove();
+      const element1 = document.getElementById("demo2");
+      element1.remove();
+      const element2 = document.getElementById("demo3");
+      element2.remove();
+      const element3 = document.getElementById("homeLogo");
+      element3.remove();
+      const element4 = document.getElementById("guestLogo");
+      element4.remove();
+      const element5 = document.getElementById("lastBr");
+      element5.remove();
         if(homeScore > guestScore){
           document.getElementById("demo").innerHTML = "Home team wins!";
         }

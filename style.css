@@ -9,14 +9,40 @@ p {
   margin-top: 0px;
 }
 
+#homeLogo {
+  width: 350px;
+  height: 350px;
+  /*border: 1px solid black;*/
+  background-position: center;
+  background-color: transparent;
+  position: relative;
+  display: inline-block;
+}
+
+#guestLogo {
+  width: 350px;
+  height: 350px;
+  left: 700px;
+  /*border: 1px solid black;*/
+  background-position: center;
+  background-color: transparent;
+  position: relative;
+  display: inline-block;
+}
+
 #demo2 {
   text-align: left;
+  float: left;
   margin: 0%;
-  display: inline;
+  position: relative;
+  /*display: inline;*/
+  top: 0px;
 }
 
 #demo3 {
+  text-align: right;
   float: right;
   margin: 0%;
-  display: inline;
+  position: relative;
+  /*display: inline;*/
 }
