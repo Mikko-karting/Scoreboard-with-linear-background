@@ -12,7 +12,7 @@ p {
 #homeLogo {
   width: 350px;
   height: 350px;
-  /*border: 1px solid black;*/
+  border: 1px solid black;
   background-position: center;
   background-color: transparent;
   position: relative;
@@ -23,7 +23,7 @@ p {
   width: 350px;
   height: 350px;
   left: 700px;
-  /*border: 1px solid black;*/
+  border: 1px solid black;
   background-position: center;
   background-color: transparent;
   position: relative;
@@ -45,4 +45,16 @@ p {
   margin: 0%;
   position: relative;
   /*display: inline;*/
+}
+
+@keyframes animation1 {
+  0%   {background-color:transparent; left:1600px; top:200px;}
+  50%  {background-color:transparent; left:550px; top:200px;}
+  100% {background-color:transparent; left:0px; top:0px;}
+}
+
+@keyframes animation2 {
+  0%   {background-color:transparent; left:-750px; top:200px;}
+  50%  {background-color:transparent; left:200px; top:200px;}
+  100% {background-color:transparent; left:700px; top:0px;}
 }

@@ -8,6 +8,8 @@ const home_image_input = document.querySelector("#homeImageInput");
 const guest_image_input = document.querySelector("#guestImageInput");
 var loaded_image1 = "";
 var loaded_image2 = "";
+var homeLogo = document.querySelector("#homeLogo");
+var guestLogo = document.querySelector("#guestLogo");
 
     //Load and input teams logos
     //Home team's logo
@@ -15,7 +17,7 @@ var loaded_image2 = "";
       const read = new FileReader();
       read.addEventListener("load", () => {
         loaded_image1 = read.result;
-        document.querySelector("#homeLogo").style.backgroundImage = `url(${loaded_image1})`;
+        homeLogo.style.backgroundImage = `url(${loaded_image1})`;
       });
       read.readAsDataURL(this.files[0]);
     })
@@ -24,7 +26,7 @@ var loaded_image2 = "";
       const read = new FileReader();
       read.addEventListener("load", () => {
         loaded_image2 = read.result;
-        document.querySelector("#guestLogo").style.backgroundImage = `url(${loaded_image2})`;
+        guestLogo.style.backgroundImage = `url(${loaded_image2})`;
       });
       read.readAsDataURL(this.files[0]);
     })
@@ -47,11 +49,39 @@ function myFunction() {
     var mylist2 = document.getElementById("myList2");
     var bodyId = document.getElementById("bodyId");
     setBackgroundColor();
+    setImageAnimation();
 
     function setBackgroundColor(){
       bodyId.style.background = "linear-gradient(to right bottom," + mylist.options[mylist.selectedIndex].text +
       "," + mylist2.options[mylist2.selectedIndex].text + ")";
       bodyId.style.backgroundAttachment = "fixed";
+    }
+
+    function setImageAnimation(){
+      homeLogo.style.width = "350px";
+      homeLogo.style.height = "350px";
+      homeLogo.style.backgroundPosition = "center";
+      homeLogo.style.backgroundSize = "cover";
+      homeLogo.style.backgroundColor = "transparent";
+      homeLogo.style.position = "relative";
+      homeLogo.style.display = "inline-block";
+      homeLogo.style.animationName = "animation1";
+      homeLogo.style.animationDuration = "4s";
+      homeLogo.style.animationFillMode = "forwards";
+
+      guestLogo.style.width = "350px";
+      guestLogo.style.height = "350px";
+      guestLogo.style.left = "-750px";
+      guestLogo.style.top = "200px";
+      guestLogo.style.backgroundPosition = "center";
+      guestLogo.style.backgroundSize = "cover";
+      guestLogo.style.backgroundColor = "transparent";
+      guestLogo.style.position = "relative";
+      guestLogo.style.display = "inline-block";
+      guestLogo.style.animationName = "animation2";
+      guestLogo.style.animationDuration = "4s";
+      guestLogo.style.animationFillMode = "forwards";
+      guestLogo.style.animationDelay = "4s";
     }
     
     //Set playtime, team names and scores
