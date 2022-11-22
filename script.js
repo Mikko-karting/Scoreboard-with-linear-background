@@ -58,26 +58,26 @@ function myFunction() {
     }
 
     function setImageAnimation(){
-      homeLogo.style.width = "350px";
-      homeLogo.style.height = "350px";
-      homeLogo.style.backgroundPosition = "center";
-      homeLogo.style.backgroundSize = "cover";
-      homeLogo.style.backgroundColor = "transparent";
-      homeLogo.style.position = "relative";
-      homeLogo.style.display = "inline-block";
+      //homeLogo.style.width = "350px";
+      //homeLogo.style.height = "350px";
+      //homeLogo.style.backgroundPosition = "center";
+      //homeLogo.style.backgroundSize = "cover";
+      //homeLogo.style.backgroundColor = "transparent";
+      //homeLogo.style.position = "relative";
+      //homeLogo.style.display = "inline-block";
       homeLogo.style.animationName = "animation1";
       homeLogo.style.animationDuration = "4s";
       homeLogo.style.animationFillMode = "forwards";
 
-      guestLogo.style.width = "350px";
-      guestLogo.style.height = "350px";
+      //guestLogo.style.width = "350px";
+      //guestLogo.style.height = "350px";
       guestLogo.style.left = "-750px";
       guestLogo.style.top = "200px";
-      guestLogo.style.backgroundPosition = "center";
-      guestLogo.style.backgroundSize = "cover";
-      guestLogo.style.backgroundColor = "transparent";
-      guestLogo.style.position = "relative";
-      guestLogo.style.display = "inline-block";
+      //guestLogo.style.backgroundPosition = "center";
+      //guestLogo.style.backgroundSize = "cover";
+      //guestLogo.style.backgroundColor = "transparent";
+      //guestLogo.style.position = "relative";
+      //guestLogo.style.display = "inline-block";
       guestLogo.style.animationName = "animation2";
       guestLogo.style.animationDuration = "4s";
       guestLogo.style.animationFillMode = "forwards";
