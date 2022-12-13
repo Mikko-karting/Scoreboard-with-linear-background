@@ -41,8 +41,8 @@ function myFunction() {
   if(homeName == '' || guestName == '' || minutes == ''){
     document.getElementById("demo").innerHTML =  "Input field/s are empty, fill every fields";
   }
-  else if(isNaN(minutes)){
-    document.getElementById("demo").innerHTML =  "Time field input is not a number, add number";
+  else if(minutes <= 0){
+    document.getElementById("demo").innerHTML =  "Time value can't be 0 minute or lower";
   }
   else{
     var mylist = document.getElementById("myList");
@@ -58,26 +58,14 @@ function myFunction() {
     }
 
     function setImageAnimation(){
-      //homeLogo.style.width = "350px";
-      //homeLogo.style.height = "350px";
-      //homeLogo.style.backgroundPosition = "center";
-      //homeLogo.style.backgroundSize = "cover";
-      //homeLogo.style.backgroundColor = "transparent";
-      //homeLogo.style.position = "relative";
-      //homeLogo.style.display = "inline-block";
+      homeLogo.style.border = "none";
       homeLogo.style.animationName = "animation1";
       homeLogo.style.animationDuration = "4s";
       homeLogo.style.animationFillMode = "forwards";
 
-      //guestLogo.style.width = "350px";
-      //guestLogo.style.height = "350px";
+      guestLogo.style.border = "none";
       guestLogo.style.left = "-750px";
       guestLogo.style.top = "200px";
-      //guestLogo.style.backgroundPosition = "center";
-      //guestLogo.style.backgroundSize = "cover";
-      //guestLogo.style.backgroundColor = "transparent";
-      //guestLogo.style.position = "relative";
-      //guestLogo.style.display = "inline-block";
       guestLogo.style.animationName = "animation2";
       guestLogo.style.animationDuration = "4s";
       guestLogo.style.animationFillMode = "forwards";
