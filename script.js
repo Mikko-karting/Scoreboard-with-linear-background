@@ -4,6 +4,7 @@ var seconds = 0;
 let homeScore = 0;
 let guestScore = 0;
 var lineBreaker = document.querySelectorAll("br");
+var boldText = document.querySelectorAll("b");
 const home_image_input = document.querySelector("#homeImageInput");
 const guest_image_input = document.querySelector("#guestImageInput");
 var loaded_image1 = "";
@@ -51,34 +52,38 @@ function myFunction() {
     setBackgroundColor();
     setImageAnimation();
 
+    //set background color
     function setBackgroundColor(){
       bodyId.style.background = "linear-gradient(to right bottom," + mylist.options[mylist.selectedIndex].text +
       "," + mylist2.options[mylist2.selectedIndex].text + ")";
       bodyId.style.backgroundAttachment = "fixed";
     }
 
+    //set starting animation
     function setImageAnimation(){
       homeLogo.style.border = "none";
       homeLogo.style.animationName = "animation1";
       homeLogo.style.animationDuration = "4s";
       homeLogo.style.animationFillMode = "forwards";
+      homeLogo.style.animationTimingFunction = "linear";
 
       guestLogo.style.border = "none";
-      guestLogo.style.left = "-750px";
-      guestLogo.style.top = "200px";
+      guestLogo.style.left = "-87.5vw";
+      guestLogo.style.top = "10vw";
       guestLogo.style.animationName = "animation2";
       guestLogo.style.animationDuration = "4s";
       guestLogo.style.animationFillMode = "forwards";
       guestLogo.style.animationDelay = "4s";
+      guestLogo.style.animationTimingFunction = "linear";
     }
     
     //Set playtime, team names and scores
     document.getElementById("demo").innerHTML =  hours + ":"
     + minutes + ":" + seconds;
     document.getElementById("demo2").innerHTML = 
-    "Points of team " + homeName + ": " + homeScore;
+    "Points of " + homeName + ": " + homeScore;
     document.getElementById("demo3").innerHTML = 
-    "Points of team " + guestName + ": " + guestScore;
+    "Points of " + guestName + ": " + guestScore;
     
     //Remove every selection elements
     const element = document.getElementById("one");
@@ -87,35 +92,24 @@ function myFunction() {
     element2.remove();
     const element3 = document.getElementById("myText2");
     element3.remove();
-    const element4 = document.getElementById("two");
+    const element4 = document.getElementById("myList");
     element4.remove();
-    const element5 = document.getElementById("myList");
+    const element5 = document.getElementById("bt");
     element5.remove();
-    const element6 = document.getElementById("bt");
+    const element6 = document.getElementById("myText3");
     element6.remove();
-    const element7 = document.getElementById("homeInput");
+    const element7 = document.getElementById("myList2");
     element7.remove();
-    const element8 = document.getElementById("guestInput");
-    element8.remove();
-    const element9 = document.getElementById("timeInput");
-    element9.remove();
-    const element10 = document.getElementById("myText3");
-    element10.remove();
-    const element11 = document.getElementById("three");
-    element11.remove();
-    const element12 = document.getElementById("myList2");
-    element12.remove();
     for (let i = 0; i < lineBreaker.length-1; i++) {
       lineBreaker[i].remove();
     }
-    const element13 = document.getElementById("homeImage");
-    element13.remove();
-    const element14 = document.getElementById("homeImageInput");
-    element14.remove();
-    const element15 = document.getElementById("guestImage");
-    element15.remove();
-    const element16 = document.getElementById("guestImageInput");
-    element16.remove();
+    for (let i = 0; i < boldText.length; i++) {
+      boldText[i].remove();
+    }
+    const element8 = document.getElementById("homeImageInput");
+    element8.remove();
+    const element9 = document.getElementById("guestImageInput");
+    element9.remove();
     
   // Update the count down every 1 second
   var update = setInterval(function() {
@@ -196,17 +190,17 @@ function myFunction() {
     bodyId.addEventListener("keyup", function (event){
     
     if(event.key == "1"){
-      document.getElementById('demo2').innerHTML = "Points of team " + homeName + ": " + (homeScore = homeScore + 1);
+      document.getElementById('demo2').innerHTML = "Points of " + homeName + ": " + (homeScore = homeScore + 1);
       console.log(homeScore);
     }
     else if(event.key == "!"){
-      document.getElementById('demo2').innerHTML = "Points of team " + homeName + ": " + --homeScore;
+      document.getElementById('demo2').innerHTML = "Points of " + homeName + ": " + --homeScore;
     }
     else if(event.key == "2"){
-      document.getElementById('demo3').innerHTML = "Points of team " + guestName + ": " + ++guestScore;
+      document.getElementById('demo3').innerHTML = "Points of " + guestName + ": " + ++guestScore;
     }
     else if(event.key == '"'){
-      document.getElementById('demo3').innerHTML = "Points of team " + guestName + ": " + --guestScore;
+      document.getElementById('demo3').innerHTML = "Points of " + guestName + ": " + --guestScore;
     }
     
   });

@@ -6,12 +6,13 @@ body {
 p {
   text-align: center;
   font-size: 60px;
+  font-weight: bold;
   margin-top: 0px;
 }
 
 #homeLogo {
-  width: 350px;
-  height: 350px;
+  width: 25vw;
+  height: 25vw;
   border: 1px solid black;
   background-position: center;
   background-size: cover;
@@ -21,9 +22,9 @@ p {
 }
 
 #guestLogo {
-  width: 350px;
-  height: 350px;
-  left: 700px;
+  width: 25vw;
+  height: 25vw;
+  left: 45vw;
   border: 1px solid black;
   background-position: center;
   background-size: cover;
@@ -35,26 +36,23 @@ p {
 #demo2 {
   text-align: left;
   float: left;
-  /*margin: 0%;
-  position: relative;
-  top: 0px;*/
 }
 
 #demo3 {
   text-align: right;
   float: right;
-  /*margin: 0%;
-  position: relative;*/
 }
 
 @keyframes animation1 {
-  0%   {background-color:transparent; left:1600px; top:200px;}
-  50%  {background-color:transparent; left:550px; top:200px;}
-  100% {background-color:transparent; left:0px; top:0px;}
+  0%   {background-color:transparent; left:137.5vw; top:10vw;}
+  37.5%  {background-color:transparent; left:37.5vw; top:10vw;}
+  62.5%  {background-color:transparent; left:37.5vw; top:10vw;}
+  100% {background-color:transparent; left:0vw; top:0vw;}
 }
 
 @keyframes animation2 {
-  0%   {background-color:transparent; left:-750px; top:200px;}
-  50%  {background-color:transparent; left:200px; top:200px;}
-  100% {background-color:transparent; left:700px; top:0px;}
+  0%   {background-color:transparent; left:-87.5vw; top:10vw;}
+  37.5%  {background-color:transparent; left:12.5vw; top:10vw;}
+  62.5%  {background-color:transparent; left:12.5vw; top:10vw;}
+  100% {background-color:transparent; left:45vw; top:0vw;}
 }
