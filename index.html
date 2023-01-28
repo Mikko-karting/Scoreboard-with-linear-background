@@ -7,16 +7,16 @@
 </head>
 <body id="bodyId">
 
-<h1 id="one">Hello World!</h1>
+<h1 id="header">Add information below and start the game!</h1>
 
-<b id="homeInput"> Input home team's name </b>
-<input type="text" id="myText" value="">
+<b id="homeInputText"> Input home team's name </b>
+<input type="text" id="homeInput" value="">
   <br>
-<b id="guestInput"> Input guest team's name </b>
-<input type="text" id="myText2" value="">
+<b id="guestInputText"> Input guest team's name </b>
+<input type="text" id="guestInput" value="">
   <br>
-<b id="timeInput"> Input match time </b>
-<input type="number" id="myText3" value="">
+<b id="timeInputText"> Input match time </b>
+<input type="number" id="timeInput" value="">
   <br>
 <b id="homeImage"> Add home team logo </b>
 <input type="file" id="homeImageInput" accept="image/jpg, image/png">
@@ -26,47 +26,47 @@
   <br>
 
 <b id="two"> Select home team color </b>  
-<select id = "myList" >  
+<select id = "colorList" >  
 <option> ---Choose color--- </option>  
-<option> red </option>  
-<option> blue </option>  
-<option> black </option>  
-<option> yellow </option>  
-<option> green </option> 
-<option> orange </option> 
-<option> white </option>
-<option> purple </option> 
-<option> silver </option>
+<option> black </option>
+<option> blue </option>
 <option> gold </option>
+<option> green </option>
 <option> grey </option>
+<option> orange </option>
+<option> purple </option>
+<option> red </option>
+<option> silver </option>
+<option> white </option>
+<option> yellow </option>
 </select>
 <br>
 
-  <b id="three"> Select guest team color </b>  
-  <select id = "myList2" >  
-  <option> ---Choose color--- </option>  
-  <option> red </option>  
-  <option> blue </option>  
-  <option> black </option>  
-  <option> yellow </option>  
-  <option> green </option> 
-  <option> orange </option> 
-  <option> white </option>
-  <option> purple </option> 
-  <option> silver </option>
-  <option> gold </option>
-  <option> grey </option>
-  </select><p>
-    <br>
+<b id="three"> Select guest team color </b>  
+<select id = "colorList2" >  
+<option> ---Choose color--- </option>  
+<option> black </option>
+<option> blue </option>
+<option> gold </option>
+<option> green </option>
+<option> grey </option>
+<option> orange </option>
+<option> purple </option>
+<option> red </option>
+<option> silver </option>
+<option> white </option>
+<option> yellow </option>
+</select><p>
+  <br>
 
 <button type="button" onclick="myFunction()" id="bt">Start the game</button>
 
-<p id="demo"></p>
+<p id="timeText"></p>
 <div id="homeLogo"></div>
 <div id="guestLogo"></div>
 <br id="lastBr">
-<p id="demo2"></p>
-<p id="demo3"></p>
+<p id="homeScoreText"></p>
+<p id="guestScoreText"></p>
 
 <script type="text/javascript" src="script.js"></script>
 

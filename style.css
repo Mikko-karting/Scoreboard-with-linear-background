@@ -33,12 +33,12 @@ p {
   display: inline-block;
 }
 
-#demo2 {
+#homeScoreText {
   text-align: left;
   float: left;
 }
 
-#demo3 {
+#guestScoreText {
   text-align: right;
   float: right;
 }
