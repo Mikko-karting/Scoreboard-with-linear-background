@@ -1,10 +1,5 @@
-var hours = 0;
-var minutes = 0;
-var seconds = 0;
-let homeScore = 0;
-let guestScore = 0;
 var lineBreaker = document.querySelectorAll("br");
-var boldText = document.querySelectorAll("b");
+var labelTags = document.querySelectorAll("label");
 var inputTypes = document.querySelectorAll("input");
 const home_image_input = document.querySelector("#homeImageInput");
 const guest_image_input = document.querySelector("#guestImageInput");
@@ -35,6 +30,11 @@ var guestLogo = document.querySelector("#guestLogo");
 
 
 function myFunction() {
+  var hours = 0;
+  var minutes = 0;
+  var seconds = 0;
+  let homeScore = 0;
+  let guestScore = 0;
 
   var homeName = document.getElementById("homeInput").value;
   var guestName = document.getElementById("guestInput").value;
@@ -98,8 +98,8 @@ function myFunction() {
     for (let i = 0; i < lineBreaker.length-1; i++) {
       lineBreaker[i].remove();
     }
-    for (let i = 0; i < boldText.length; i++) {
-      boldText[i].remove();
+    for (let i = 0; i < labelTags.length; i++) {
+      labelTags[i].remove();
     }
     for (let i = 0; i < inputTypes.length; i++) {
       inputTypes[i].remove();
@@ -185,7 +185,6 @@ function myFunction() {
     
     if(event.key == "1"){
       document.getElementById('homeScoreText').innerHTML = "Points of " + homeName + ": " + ++homeScore;
-      console.log(homeScore);
     }
     else if(event.key == "!"){
       document.getElementById('homeScoreText').innerHTML = "Points of " + homeName + ": " + --homeScore;

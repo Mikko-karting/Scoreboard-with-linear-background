@@ -4,10 +4,14 @@ body {
 }
 
 p {
-  text-align: center;
   font-size: 60px;
   font-weight: bold;
   margin-top: 0px;
+}
+
+p#timeText {
+  text-align: center;
+  margin-top: 50px;
 }
 
 #homeLogo {

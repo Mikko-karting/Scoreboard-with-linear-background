@@ -1,74 +1,76 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-    <title>Scoreboard</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body id="bodyId">
+  <head>
+      <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+      <title>Scoreboard</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
 
-<h1 id="header">Add information below and start the game!</h1>
 
-<b id="homeInputText"> Input home team's name </b>
-<input type="text" id="homeInput" value="">
-  <br>
-<b id="guestInputText"> Input guest team's name </b>
-<input type="text" id="guestInput" value="">
-  <br>
-<b id="timeInputText"> Input match time </b>
-<input type="number" id="timeInput" value="">
-  <br>
-<b id="homeImage"> Add home team logo </b>
-<input type="file" id="homeImageInput" accept="image/jpg, image/png">
-  <br>
-<b id="guestImage"> Add guest team logo </b>
-<input type="file" id="guestImageInput" accept="image/jpg, image/png">
-  <br>
+  <body id="bodyId">
 
-<b id="two"> Select home team color </b>  
-<select id = "colorList" >  
-<option> ---Choose color--- </option>  
-<option> black </option>
-<option> blue </option>
-<option> gold </option>
-<option> green </option>
-<option> grey </option>
-<option> orange </option>
-<option> purple </option>
-<option> red </option>
-<option> silver </option>
-<option> white </option>
-<option> yellow </option>
-</select>
-<br>
+    <h1 id="header">Add information below and start the game!</h1>
 
-<b id="three"> Select guest team color </b>  
-<select id = "colorList2" >  
-<option> ---Choose color--- </option>  
-<option> black </option>
-<option> blue </option>
-<option> gold </option>
-<option> green </option>
-<option> grey </option>
-<option> orange </option>
-<option> purple </option>
-<option> red </option>
-<option> silver </option>
-<option> white </option>
-<option> yellow </option>
-</select><p>
-  <br>
+    <label for="homeInput"> Input home team's name </label>
+    <input type="text" id="homeInput" value=""><br>
 
-<button type="button" onclick="myFunction()" id="bt">Start the game</button>
+    <label for="guestInput"> Input guest team's name </label>
+    <input type="text" id="guestInput" value=""><br>
 
-<p id="timeText"></p>
-<div id="homeLogo"></div>
-<div id="guestLogo"></div>
-<br id="lastBr">
-<p id="homeScoreText"></p>
-<p id="guestScoreText"></p>
+    <label for="timeInput"> Input match time </label>
+    <input type="number" id="timeInput" value=""><br>
 
-<script type="text/javascript" src="script.js"></script>
+    <label for="homeImageInput"> Add home team logo </label>
+    <input type="file" id="homeImageInput" accept="image/jpg, image/png"><br>
 
-</body>
+    <label for="guestImageInput"> Add guest team logo </label>
+    <input type="file" id="guestImageInput" accept="image/jpg, image/png"><br>
+
+
+    <label for="colorList"> Select home team color </label>  
+    <select id = "colorList" >  
+      <option> ---Choose color--- </option>  
+      <option> black </option>
+      <option> blue </option>
+      <option> gold </option>
+      <option> green </option>
+      <option> grey </option>
+      <option> orange </option>
+      <option> purple </option>
+      <option> red </option>
+      <option> silver </option>
+      <option> white </option>
+      <option> yellow </option>
+    </select>
+    <br>
+
+    <label for="colorList2"> Select guest team color </label>  
+    <select id = "colorList2" >  
+      <option> ---Choose color--- </option>  
+      <option> black </option>
+      <option> blue </option>
+      <option> gold </option>
+      <option> green </option>
+      <option> grey </option>
+      <option> orange </option>
+      <option> purple </option>
+      <option> red </option>
+      <option> silver </option>
+      <option> white </option>
+      <option> yellow </option>
+    </select>
+    <br>
+
+    <button type="button" onclick="myFunction()" id="bt">Start the game</button>
+
+    <p id="timeText"></p>
+    <div id="homeLogo"></div>
+    <div id="guestLogo"></div>
+    <br id="lastBr">
+    <p id="homeScoreText"></p>
+    <p id="guestScoreText"></p>
+
+    <script type="text/javascript" src="script.js"></script>
+
+  </body>
 </html>
