@@ -1,6 +1,7 @@
 var lineBreaker = document.querySelectorAll("br");
 var labelTags = document.querySelectorAll("label");
 var inputTypes = document.querySelectorAll("input");
+var selectElements = document.querySelectorAll("select");
 const home_image_input = document.querySelector("#homeImageInput");
 const guest_image_input = document.querySelector("#guestImageInput");
 var loaded_image1 = "";
@@ -89,12 +90,8 @@ function myFunction() {
     //Remove every selection elements
     const element = document.getElementById("header");
     element.remove();
-    const element2 = document.getElementById("colorList");
+    const element2 = document.getElementById("bt");
     element2.remove();
-    const element3 = document.getElementById("bt");
-    element3.remove();
-    const element4 = document.getElementById("colorList2");
-    element4.remove();
     for (let i = 0; i < lineBreaker.length-1; i++) {
       lineBreaker[i].remove();
     }
@@ -103,6 +100,9 @@ function myFunction() {
     }
     for (let i = 0; i < inputTypes.length; i++) {
       inputTypes[i].remove();
+    }
+    for (let i = 0; i < selectElements.length; i++) {
+      selectElements[i].remove();
     }
     
   // Update the count down every 1 second
